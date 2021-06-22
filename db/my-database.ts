@@ -1,22 +1,24 @@
-import { User } from "../interfaces/user";
+import {Items} from '../interfaces/items';
 
-const users: User[] = [];
+const items: Items[] = [];
 
-export const MyDatabaseModule = {
+export const myDatabase = {
 
-    add(user: User) : void {
-        users.push(user);
+    add(item: Items) : void {
+        items.push(item);
     },
 
-    remove(index: number): void {
-        users.splice(index, 1);
+    remove(index: number) : void {
+        items.splice(index,1);
     },
-
+  
     show() : void {
-        for(const user of users){
-            console.log(user);
+        for(const item of items){
+            console.log(item);
         }
     }
+
+
 }
 
     
